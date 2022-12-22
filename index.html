@@ -11,15 +11,15 @@
       </h1>
       <nav>
         <ul>
-          <li><a href="">Message</a></li>
-          <li><a href="">Date</a></li>
-          <li><a href="">Form</a></li>
+          <li><a href="#msgArea">Message</a></li>
+          <li><a href="#dateArea">Date</a></li>
+          <li><a href="#formArea">Form</a></li>
         </ul>
       </nav>
       <p>Scroll<br><img src="images/bar.png" alt=""></p>
     </header>
     <main>
-      <section>
+      <section id="msgArea">
         <h2>Message</h2>
         <p>
           この度、カピぞうとカピ子は<br>
@@ -31,7 +31,7 @@
         </p>
         <p><img src="images/message_img.png" alt="カピぞうとカピ子"></p>
       </section>
-      <section>
+      <section id="dateArea">
         <h2>Save the Date</h2>
         <p><img src="images/date_img.jpg" alt=""></p>
         <p>
@@ -47,15 +47,32 @@
           </p>
         </section>
       </section>
-      <section>
+      <section id="formArea">
         <h2>RSVP</h2>
-        ご出席 ご欠席
-        お名前
-        メールアドレス
-        ご自身のタイプ 草食動物 肉食動物 人間さん
-        アレルギーのある食べ物 卵 乳 小麦 大豆
-        メッセージ
-        Send
+        <form action=""method="">
+        <p>
+          <label><input type="radio" name="attend" value="ご出席" checked>ご出席</label>
+          <label><input type="radio" name="attend" value="ご欠席">ご欠席</label>
+        </p>
+        <p>お名前<input type="text" name="user_name"></p>
+        <p>メールアドレス<input type="email" name="user_mail"></p>
+        <p>ご自身のタイプ
+        <select name="user_type">
+         <option value="草食動物">草食動物</option>
+         <option value="肉食動物">肉食動物</option>
+         <option value="人間さん">人間さん</option>
+        </select>
+        </p>
+        <p>
+          アレルギーのある食べ物
+          <label><input type="checkbox" name="allergy" value="卵">卵<label>
+          <label><input type="checkbox" name="allergy" value="乳">乳<label>
+          <label><input type="checkbox" name="allergy" value="小麦">小麦<label>
+          <label><input type="checkbox" name="allergy" value="大豆">大豆<label>
+    　　　</p>
+        <p>メッセージ<textarea name="message"></textarea></p>
+        <p><input type="submit" value="Send"></p>
+        </form>
       </section>
     </main>
     <footer>
